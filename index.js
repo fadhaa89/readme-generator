@@ -3,6 +3,9 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
+const util = require('util');
+// const readFileAsync = util.promisify(fs.readFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 // const MARKDOWN = require("./utils/generateMarkdown");
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 // TODO: Create an array of questions for user input
@@ -71,28 +74,46 @@ function getUserInformation() {
     return inquirer.prompt(questions).then(function (answers) {
         // console.log("answers: ", answers);
         userInput = answers;
-
-        // userData.title = userInput.title,
-        // userData.introText = userInput.introText,
-        // userData.instructions = userInput.instructions,
-        // userData.demo = userInput.demo,
-        // userData.githubPage = userInput.githubPage,
-        // userData.githubRepo = userInput.githubRepo,
-        // userData.name = userInput.name,
-        // userData.location = userInput.location,
-        // userData.bio = userInput.bio,
-        // userData.linkedIn = userInput.linkedIn,
-        // userData.contact = userInput.contact,
-        // userData.images = userInput.images,
-        // userData.shoutOuts = userInput.shoutOuts
-        // dd installation, license, tests, questions
         console.log("userInput: ", userInput);
     })
 }
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+function writeToFile(data) {
+    var dataString = generateMarkdown(data);
+    fs.writeFile(dataString, function (err) {
+        if (err) throw err;
+        console.log('Your README File has been created! You will find it in the folder where you ran the start command.');
+    });
+}
 
+function generateMarkdown(data) {
+    return `
+    # ${data.title}<br>
+    ${data.description}
+    `
+
+}
+
+module.exports = generateMarkdown;
+// CREATE NEW README FILE WITH USERDATA. GRABS DATA FROM USERDATA OBJ, INSERTS DATA INTO STRING WITH MD HEADINGS, STRINGIFIES THAT, AND WRITES IT ALL TO NEW README.===============================================================
+// function writeFile(userData) {
+//     var userDataStr = generateMarkdown(userData);
+//     fs.writeFile('README.md', userDataStr, function (err) {
+//         if (err) throw err;
+//         console.log('Your README File has been created! You will find it in the folder where you ran the start command.');
+//     });
+// };
+
+// fs.writeFile(file, data[, options], callback)
+
+function writeFile2(data) {
+    var dataString = generateMarkdown(data)
+    fs.writeFile("newREADME.md", dataString, function (err) {
+        if (err) throw err;
+        console.log('SUCCESS!');
+    })
+}
 // function init () {
 //     getUserInformation();
 // }
@@ -100,8 +121,7 @@ function getUserInformation() {
 // TODO: Create a function to initialize app
 async function init() {
     await getUserInformation();
-    // writeFile(userData);
-    // writeFile();
+     writeFile2(userInput);
 }
 
 // Function call to initialize app
