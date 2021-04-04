@@ -20,11 +20,6 @@ const questions = [
     {
         type: "input",
         name: "Email",
-        message: "What is your email address?",
-    },
-
-    {
-        type: "input",
         name: "Description",
         message: "write a brief description of your project",
     },
