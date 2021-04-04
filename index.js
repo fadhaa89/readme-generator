@@ -6,6 +6,7 @@ const fs = require("fs");
 const util = require('util');
 // const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
+const generateMarkdown = require('./Develop/utils/generateMarkdown');
 // const MARKDOWN = require("./utils/generateMarkdown");
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 // TODO: Create an array of questions for user input
@@ -87,15 +88,6 @@ function writeToFile(data) {
     });
 }
 
-function generateMarkdown(data) {
-    return `
-    # ${data.title}<br>
-    ${data.description}
-    `
-
-}
-
-module.exports = generateMarkdown;
 // CREATE NEW README FILE WITH USERDATA. GRABS DATA FROM USERDATA OBJ, INSERTS DATA INTO STRING WITH MD HEADINGS, STRINGIFIES THAT, AND WRITES IT ALL TO NEW README.===============================================================
 // function writeFile(userData) {
 //     var userDataStr = generateMarkdown(userData);
