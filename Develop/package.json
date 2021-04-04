@@ -1,0 +1,14 @@
+{
+  "name": "professionalreadmegenerator",
+  "version": "1.0.0",
+  "description": "a professional readme generator done by node to generate a quick readme from scratch based on user input",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fadhaa Abdullah",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
+}
