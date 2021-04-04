@@ -66,8 +66,10 @@ const questions = [
 let userInput = {};
 
 function getUserInformation() {
+    console.log("running getUserInformation function");
+
     return inquirer.prompt(questions).then(function (answers) {
-        console.log("answers: ", answers);
+        // console.log("answers: ", answers);
         userInput = answers;
 
         // userData.title = userInput.title,
