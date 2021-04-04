@@ -38,6 +38,23 @@ const questions = [
         name: "Usage",
         message: "What is this App designed to do ?",
     },
+    {
+        type: "input",
+        name: "Repo",
+        message: "What is your Repo link ?",
+    },
+    {
+        type: "input",
+        name: "Githubname",
+        message: "What is your Github name ?",
+    },
+    {
+        type: "input",
+        name: "Githublink",
+        message: "What is your Github link ?",
+    },
+
+
 
         
 
