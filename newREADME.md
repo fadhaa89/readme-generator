@@ -1,31 +1,25 @@
-![GitHub license](https://img.shields.io/badge/license-None-blue.svg)
-  # ddddddddddddddddddddddddddd
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+  # Weather Dashboard
 
   ## Description
-  dddddddddddddddddddddddddddd
-  ddddddddddddddddddddddddddd
-  
-  
-  ## Table of Contents
-  *Repo Link
-  *Installation
-  
+  a simple and helpful Weather Dashboard
+  for getting the current and five days forcast
   
   ## Repo Link
-  dddddddddddddddddddddddddd 
+  https://github.com/fadhaa89?tab=repositories 
   
   ## Author Github Name
-  ddddddddddddddddddd
+  Fadhaa89
    
   ## Installation
-  dddddddddddddddddddddddddd
+  npm
   
   ## Acknowledgements
-  dddddddddddddddddddddddddddd
+  my tuter and TAs
   
   
   ## Author 
   name : Fadhaa Abdullah 
-  Email: ddddddddddddddddddddddddddd  
-  Github page: ddddddddddddddddddd
+  Email: fadhaaabdullah8991@gmail.com  
+  Github page: Fadhaa89
   
