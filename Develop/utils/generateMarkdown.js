@@ -1,5 +1,6 @@
+let data = require("../../index");
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// If there is no license, return an empty strin
 function renderLicenseBadge(license) {}
 
 // TODO: Create a function that returns the license link
@@ -11,10 +12,16 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+// function generateMarkdown(data) {
+//   return `# ${data.title}
 
-`;
+// `;
+// }
+
+function generateMarkdown() {
+  let data = {};
+  return `# Hello World!<br>
+  ${data.Title}`
 }
 
 module.exports = generateMarkdown;
